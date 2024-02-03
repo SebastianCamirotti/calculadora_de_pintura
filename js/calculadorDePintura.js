@@ -1,19 +1,19 @@
 alert("¡Bienvenido al calculador de pintura!");
 
 // Funcion que calcula el la cantidad de pintura necesaria por pared
-function calculoPorPared(altura, largo, consumo) {
+const calculoPorPared = (altura, largo, consumo) => {
     let areaTotal = altura * largo;
     let cantidadDeLitros = Math.ceil(areaTotal / consumo);
     return cantidadDeLitros;
 }
 
 //Función para elegir bien el indice del array
-function buscarTipoDePintura(seleccion) {
+const buscarTipoDePintura = (seleccion) => {
     return tiposDePintura[seleccion - 1];
 }
 
 //Función que procesa todos los datos brindados por el usuario.
-function calcularPinturaParaHabitacion() {
+const calcularPinturaParaHabitacion = () => {
 
     let seleccion = parseInt(prompt("Selecciona el número del tipo de pintura:\n" +
         tiposDePintura.map((pintura, index) => `${index + 1}. ${pintura.tipo}`).join('\n')));
